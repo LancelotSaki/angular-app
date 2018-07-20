@@ -1,0 +1,39 @@
+.page {
+  width: 794px;
+  height: 1090px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 35px auto;
+  border: 1px solid blanchedalmond;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.head {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: calc(100% - 10px);
+  height: 200px;
+  background: blanchedalmond;
+}
+
+.leftLayout {
+  margin: 5px;
+  width: 100px;
+  height: 40px;
+  font-size: 2rem;
+}
+
+
+
+.headPhoto {
+  right: 5px;
+   margin-right: 5px;
+   border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: lightgreen;
+}
