@@ -1,15 +1,19 @@
-<div class="angularTitle">Angular v6.0.9</div>
+<div class="angularTitle">{{angularVersion}}</div>
 <div class="page">
   <div class="head">
-    <div class="leftLayout">简历</div>
+    <div class="leftLayout">{{title}}</div>
     <div class="headPhoto"></div>
+    <div class="message">{{profile.name}}</div>
   </div>
 <ul>
-  <li>
-    <a routerLink="/home" routerLinkActive="active">aaaaa</a>
+  <li *ngFor="let skill of skills">
+    <p>{{skill.name}}</p>
+  </li>
+  <li *ngFor="let exp of exps">
+    <p>{{exp.time}}</p>
   </li>
   <li>
-    <a routerLink="/profile">bbbbb</a>
+    <input type="button" value="点击一下" (click)="willClick()">
   </li>
 </ul>
 </div>
