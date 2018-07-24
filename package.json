@@ -2,7 +2,7 @@
   "name": "angular-app",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve --open",
+    "start": "ng serve --host 192.168.1.117 --open",
     "build": "ng build --prod --aot --build-optimizer --source-map=false --base-href ./",
     "test": "ng test",
     "lint": "ng lint",

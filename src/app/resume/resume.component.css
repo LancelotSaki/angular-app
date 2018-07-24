@@ -41,11 +41,436 @@
   background: lightgreen;
 }
 
-.message {
+
+.info::before {
+  content: "个人信息";
+  display: inline-block;
   position: absolute;
-  right: 5px;
-  bottom : 5px;
+  left: 0;
+  top: -40px;
   width: 100px;
   height: 30px;
+  margin-right: 15px;
+  font-size: 1.3rem;
+}
+
+.info {
+  position: relative;
+  margin-top: 45px;
+  margin-left: 15px;
+  width: 350px;
+  height: 300px;
+}
+
+
+.info::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width:270px;
+  height: 1px;
+  border: 1px solid blueviolet;
+  left: 0;
+  top: -10px;
+}
+
+.info li {
+  margin-bottom: 10px;
+}
+
+.info li:first-child::before {
+  content: "姓名";
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+}
+
+.info li:first-child::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width:270px;
+  height: 1px;
+  border: 1px solid blueviolet;
+  left: 0;
+  top: 25px;
+}
+
+.info li:nth-child(2)::before {
+  content: "邮箱";
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+}
+
+.info li:nth-child(2)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width:270px;
+  height: 1px;
+  border: 1px solid blueviolet;
+  left: 0;
+  top: 65px;
+}
+
+.info li:nth-child(3)::before {
+  content: "手机号码";
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+}
+
+.info li:nth-child(3)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width:270px;
+  height: 1px;
+  border: 1px solid blueviolet;
+  left: 0;
+  top: 105px;
+}
+
+.info li:nth-child(4)::before {
+  content: "文凭";
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+}
+
+.info li:nth-child(4)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width:270px;
+  height: 1px;
+  border: 1px solid blueviolet;
+  left: 0;
+  top: 145px;
+}
+
+.info li:nth-child(5)::before {
+  content: "学校";
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+}
+
+.info li:nth-child(5)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width:270px;
+  height: 1px;
+  border: 1px solid blueviolet;
+  left: 0;
+  top: 185px;
+}
+
+.info li:nth-child(6)::before {
+  content: "地址";
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+}
+
+.info li:nth-child(6)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width:270px;
+  height: 1px;
+  border: 1px solid blueviolet;
+  left: 0;
+  top: 225px;
+}
+
+.skill::before {
+  content: "个人技能";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 100px;
+  height: 30px;
+  margin-right: 15px;
+  font-size: 1.3rem;
+}
+
+
+.skill {
+  position: relative;
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 350px;
+  height: 300px;
+}
+
+
+.skill::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width:270px;
+  height: 1px;
+  border: 1px solid blueviolet;
+  left: 0;
+  top: -10px;
+}
+
+.skill li {
+  margin-bottom: 10px;
+}
+
+
+.detail::before {
+  content: "实践经验";
+  display: inline-block;
+  position: absolute;
+  top: -25px;
+  left: 207px;
+}
+
+.detail {
+  position: absolute;
+  width: 480px;
+  height: 800px;
+  right: 5px;
+  top: 240px;
+}
+
+.timeLine::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 150px;
+  width: 1px;
+  left: 0;
+  top: -160px;
+  background: black;
+}
+
+.timeLine {
+  position: absolute;
+  height: 150px;
+  width: 1px;
+  left: 240px;
+  top: 160px;
+  background: black;
+}
+
+.timeLine::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 150px;
+  width: 1px;
+  left: 0;
+  top: 160px;
+  background: black;
+}
+
+.firstTime{
+  position: absolute;
+  width: 200px;
+  top: 145px;
+  right: 5px;
+}
+
+
+.secondTime{
+  position: absolute;
+  width: 200px;
+  top: 300px;
+  left: 5px;
+}
+
+.viewCube {
+  perspective: 500px;
+  perspective-origin: 250px 100px;
+  width: 200px;
+  height: 200px;
+  zoom: 0.5;
+  position: absolute;
+  top: 130px;
+  left: 150px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+   animation: scroll 15s linear infinite;
+}
+
+.cube:hover {
+  animation-play-state:paused;
+}
+
+@keyframes scroll{
+  100%{
+    transform: rotate3d(0,1,0,360deg);
+  }
+}
+
+
+.cube>div {
+  width: 200px;
+  height:200px;
+  border: 1px solid rgba(153, 204, 204, 0.8);
+  font-size: 150px;
   text-align: center;
+  opacity: 0.7;
+  position:absolute;
+  cursor: pointer;
+}
+
+.cube>div:nth-child(1) {
+  z-index: 4;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+.cube>div:nth-child(2) {
+  z-index: 5;
+  transform-origin: right;
+  transform: rotateY(90deg);
+}
+
+.cube>div:nth-child(3) {
+  z-index: 3;
+  transform-origin: bottom;
+  transform: rotateX(-90deg);
+}
+
+.cube>div:nth-child(4) {
+  z-index: 6;
+  transform-origin: left;
+  transform: rotateY(-90deg);
+}
+
+.cube>div:nth-child(5) {
+  z-index: 2;
+  transform-origin: center;
+  transform: translateZ(200PX);
+}
+
+.cube>div:nth-child(6) {
+  z-index: 1;
+  transform-origin: center;
+  transform: rotateY(180deg);
+}
+
+
+.viewTetra {
+  perspective: 500px;
+  perspective-origin: 250px 100px;
+  zoom: 0.9;
+  position: absolute;
+  top: 225px;
+  left: 315px;
+}
+
+.tetra {
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: scrollTriangular 15s linear infinite;
+}
+
+.tetra:hover {
+  animation-play-state:paused;
+}
+
+@keyframes scrollTriangular{
+  100%{
+    transform: rotate3d(0,1,0,360deg);
+  }
+}
+
+
+.tetra>a {
+  width: 200px;
+  height: 173px;
+  clip-path: polygon(50% 0,100% 100%,0 100%);
+  position:absolute;
+  transform-origin: center bottom;
+  border: 1px solid rgba(153, 204, 204, 0.8);
+/*  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  background-color: rgba(153, 204, 204, 0.8);*/
+}
+
+
+.tetra>a:nth-child(1) {
+  background: url("../../assets/images/skill-icon/angular.svg") no-repeat 50px 85px;
+  background-size: 50% 50%;
+  transform: rotateY(120deg) translateZ(57px) rotateX(19.2deg);
+}
+
+.tetra>a:nth-child(2) {
+  background: url("../../assets/images/skill-icon/react.svg") no-repeat 50px 85px;
+  background-size: 50% 50%;
+  transform: rotateY(240deg) translateZ(57px) rotateX(19.2deg);
+}
+
+.tetra>a:nth-child(3) {
+  background: url("../../assets/images/skill-icon/vue.svg") no-repeat 50px 85px;
+  background-size: 50% 50%;
+  transform: rotateY(0deg) translateZ(57px) rotateX(19.2deg);
+}
+
+.tetra>a:nth-child(4) {
+  transform: rotateY(0deg) translateZ(57px) rotateX(90deg);
+}
+
+.slideView {
+  perspective: 800px;
+  position: absolute;
+  top: 600px;
+  left: 170px;
+  height: 200px;
+}
+.slide {
+  width: 150px;
+  height: 100px;
+  transform-style: preserve-3d;
+  animation: scrollTriangular 30s linear infinite;
+}
+
+.slide:hover {
+  animation-play-state:paused;
+}
+
+
+.slide>div {
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  position:absolute;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  background-color: rgba(153, 204, 204, 0.8);
+  cursor: pointer;
+}
+
+.slide>div:nth-child(1) {
+  transform: rotateY(0deg) translateZ(150px) rotateX(0deg);
+}
+
+.slide>div:nth-child(2) {
+  transform: rotateY(60deg) translateZ(150px) rotateX(0deg);
+}
+
+.slide>div:nth-child(3) {
+  transform: rotateY(120deg) translateZ(150px) rotateX(0deg);
+}
+
+.slide>div:nth-child(4) {
+  transform: rotateY(180deg) translateZ(150px) rotateX(0deg);
+}
+.slide>div:nth-child(5) {
+  transform: rotateY(240deg) translateZ(150px) rotateX(0deg);
+}
+.slide>div:nth-child(6) {
+  transform: rotateY(300deg) translateZ(150px) rotateX(0deg);
 }

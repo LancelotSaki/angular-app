@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // 外部引入变量或者常量值，类似于java中的实体类
-import { Profile, Exp } from './resume';
-import {Area} from '../../assets/common/area';
+import { Profile, Info } from './resume';
 
 @Component({
   selector: 'app-resume',
@@ -15,25 +14,36 @@ export class ResumeComponent implements OnInit {
   angularVersion: string;
   // 3.外部引入再赋值
   profile: Profile = {
-    id : 1,
-    name : 'carney'
+    id: 1,
+    name: 'carney'
   };
-  exps = [
-    new Exp('20180101', '装逼无止境'),
-    new Exp('20180301', '装逼如风')
+  info = [
+    new Info('1', 'carney'),
+    new Info('2', '180000000'),
+    new Info('3', '1103418874@qq.com'),
+    new Info('4', '大学本科'),
+    new Info('5', '牛岭大学'),
+    new Info('6', '南宁市西乡塘鲁班路')
   ];
   skills = [{id: '1', name: 'Java', value: '0.78'},
     {id: '2', name: 'JavaScript', value: '0.67'},
     {id: '3', name: 'Vue', value: '0.69'},
     {id: '4', name: 'React', value: '0.70'},
-    {id: '5', name: 'Angular', value: '0.60'}];
+    {id: '5', name: 'Angular', value: '0.70'},
+    {id: '6', name: 'Jquery', value: '0.70'},
+    {id: '7', name: 'Oracle', value: '0.70'},
+    {id: '8', name: 'Mysql', value: '0.70'},
+    {id: '9', name: 'ExtJs', value: '0.70'}];
   constructor() {
-    console.log(`${this.skills[0].name}`);
-    console.log(`${Area}`);
-    this.angularVersion = `Angular v6.0.9`;
+    this.angularVersion = `Angular v6.0.8`;
   }
 
   ngOnInit() {
+    new Promise((res) => {
+      res(`执行成功`);
+    }).then((res) => {
+      console.log(res);
+    });
   }
 
   willClick() {

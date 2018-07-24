@@ -3,17 +3,62 @@
   <div class="head">
     <div class="leftLayout">{{title}}</div>
     <div class="headPhoto"></div>
-    <div class="message">{{profile.name}}</div>
   </div>
-<ul>
-  <li *ngFor="let skill of skills">
-    <p>{{skill.name}}</p>
-  </li>
-  <li *ngFor="let exp of exps">
-    <p>{{exp.time}}</p>
-  </li>
-  <li>
-    <input type="button" value="点击一下" (click)="willClick()">
+<ul class="info">
+  <li *ngFor="let i of info">
+    {{i.value}}
   </li>
 </ul>
+
+ <ul class="skill">
+   <li *ngFor="let skill of skills">
+     {{skill.name}}
+   </li>
+ </ul>
+  <div class="detail">
+    <div class="viewCube">
+      <div class="cube">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </div>
+    </div>
+    <div class="timeLine"></div>
+    <div class="firstTime">2017.01.01-2018.01.01</div>
+    <div class="secondTime">2018.01.01-2018.12.31</div>
+    <div class="viewTetra">
+      <div class="tetra">
+        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/angular-app"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/react-app"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/vue"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.baidu.com"></a>
+      </div>
+    </div>
+    <div class="slideView">
+      <div class="slide">
+        <div>
+          <p>7月1日 天气晴</p>
+        </div>
+        <div>
+          <p>7月2日 天气阴天</p>
+        </div>
+        <div>
+          <p>7月3日 天气有雨</p>
+        </div>
+        <div>
+          <p>7月4日 天气暴雨</p>
+        </div>
+        <div>
+          <p>7月5日 天气晴</p>
+        </div>
+        <div>
+          <p>7月6日 天气晴</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
 </div>

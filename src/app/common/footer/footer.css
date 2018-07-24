@@ -1,0 +1,58 @@
+.left {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.left:hover {
+  cursor: pointer;
+}
+
+.left::before {
+  content: "";
+  display: inline-block;
+  width: 75px;
+  height: 55px;
+  background: url("../../../assets/images/re0/rem001.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.left:hover::before {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 60px;
+  background: url("../../../assets/images/re0/rem002.png");
+  background-size: 100% 100%;
+  transition: width 0.8s,height 0.8s, transform 0.8s; /* Safari 和 Chrome */
+}
+
+/*----------------------------------------------------------------*/
+
+.right {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.right::before {
+  content: "";
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  background: url("../../../assets/images/re0/ram001.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.right:hover {
+  cursor: pointer;
+}
+
+.right:hover::before{
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: url("../../../assets/images/re0/ram002.png") no-repeat;
+  background-size: 100% 100%;
+  transition: width 0.8s,height 0.8s, transform 0.8s; /* Safari 和 Chrome */
+}
