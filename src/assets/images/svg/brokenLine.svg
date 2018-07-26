@@ -1,0 +1,9 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+  <g>
+    <title>Layer 1</title>
+    <line fill="none" x1="0" y1="10" x2="80" y2="10" id="svg_1" stroke="#666666"/>
+    <line stroke="#666666" fill="none" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="80" y1="10" x2="100" y2="40" id="svg_2"/>
+    <line fill="none" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="100" y1="40" x2="600" y2="40" id="svg_3" stroke="#666666"/>
+  </g>
+</svg>

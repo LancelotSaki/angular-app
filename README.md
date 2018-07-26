@@ -11,6 +11,7 @@ ts的用法。
 git clone https://github.com/LancelotSaki/angular-app
 ```
 - zip下载
+
 找到项目源码右上角的Clone or download 绿色图标，里面含有zip下载的按钮直接下载即可
 
 ### 安装angular脚手架
@@ -35,6 +36,7 @@ ng serve --open
 ng serve --host 127.0.0.1 --open
 ```
 - 启动方式2(推荐)
+
 使用WebStorm编辑器(略)
 
 ---

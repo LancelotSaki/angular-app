@@ -13,7 +13,28 @@
   border: 1px solid blanchedalmond;
   border-radius: 5px;
   box-shadow: 10px 10px 5px #888888;
+  background: #ebebeb;
 }
+
+.fork {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  clip-path: polygon(5% 0%, 45% 0%, 100% 55%, 100% 95%);
+}
+.fork::after {
+  content: "";
+  display: inline-block;
+  background: url("../../assets/images/forkme.png") no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+}
+
 
 .head {
   position: relative;
@@ -23,6 +44,7 @@
   width: calc(100% - 10px);
   height: 200px;
   background: blanchedalmond;
+  border-radius: 5px;
 }
 
 .leftLayout {
@@ -34,11 +56,12 @@
 
 .headPhoto {
   position: absolute;
-  right: 5px;
+  right: 80px;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  background: lightgreen;
+  background: url("../../assets/images/cat.png") no-repeat;
+  background-size: 107% 145%;
 }
 
 
@@ -47,7 +70,7 @@
   display: inline-block;
   position: absolute;
   left: 0;
-  top: -40px;
+  top: -30px;
   width: 100px;
   height: 30px;
   margin-right: 15px;
@@ -57,7 +80,7 @@
 .info {
   position: relative;
   margin-top: 45px;
-  margin-left: 15px;
+  margin-left: 10px;
   width: 350px;
   height: 300px;
 }
@@ -67,21 +90,20 @@
   content: "";
   display: inline-block;
   position: absolute;
-  width:270px;
-  height: 1px;
-  border: 1px solid blueviolet;
-  left: 0;
-  top: -10px;
+  width: 270px;
+  height: 50px;
+  top: -45px;
+  background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
 }
 
 .info li {
-  margin-bottom: 10px;
+  padding-top: 15px;
 }
 
 .info li:first-child::before {
   content: "姓名";
   display: inline-block;
-  width: 80px;
+  width: 45px;
   height: 30px;
 }
 
@@ -91,15 +113,15 @@
   position: absolute;
   width:270px;
   height: 1px;
-  border: 1px solid blueviolet;
+  border: 1px solid #888888;
   left: 0;
-  top: 25px;
+  top: 40px;
 }
 
 .info li:nth-child(2)::before {
   content: "邮箱";
   display: inline-block;
-  width: 80px;
+  width: 45px;
   height: 30px;
 }
 
@@ -109,15 +131,15 @@
   position: absolute;
   width:270px;
   height: 1px;
-  border: 1px solid blueviolet;
+  border: 1px solid #888888;
   left: 0;
-  top: 65px;
+  top: 85px;
 }
 
 .info li:nth-child(3)::before {
-  content: "手机号码";
+  content: "手机";
   display: inline-block;
-  width: 80px;
+  width: 45px;
   height: 30px;
 }
 
@@ -127,15 +149,15 @@
   position: absolute;
   width:270px;
   height: 1px;
-  border: 1px solid blueviolet;
+  border: 1px solid #888888;
   left: 0;
-  top: 105px;
+  top: 130px;
 }
 
 .info li:nth-child(4)::before {
   content: "文凭";
   display: inline-block;
-  width: 80px;
+  width: 45px;
   height: 30px;
 }
 
@@ -145,15 +167,15 @@
   position: absolute;
   width:270px;
   height: 1px;
-  border: 1px solid blueviolet;
+  border: 1px solid #888888;
   left: 0;
-  top: 145px;
+  top: 175px;
 }
 
 .info li:nth-child(5)::before {
   content: "学校";
   display: inline-block;
-  width: 80px;
+  width: 45px;
   height: 30px;
 }
 
@@ -163,15 +185,15 @@
   position: absolute;
   width:270px;
   height: 1px;
-  border: 1px solid blueviolet;
+  border: 1px solid #888888;
   left: 0;
-  top: 185px;
+  top: 220px;
 }
 
 .info li:nth-child(6)::before {
   content: "地址";
   display: inline-block;
-  width: 80px;
+  width: 45px;
   height: 30px;
 }
 
@@ -181,9 +203,9 @@
   position: absolute;
   width:270px;
   height: 1px;
-  border: 1px solid blueviolet;
+  border: 1px solid #888888;
   left: 0;
-  top: 225px;
+  top: 265px;
 }
 
 .skill::before {
@@ -191,36 +213,104 @@
   display: inline-block;
   position: absolute;
   left: 0;
-  top: -40px;
+  top: -35px;
   width: 100px;
   height: 30px;
   margin-right: 15px;
   font-size: 1.3rem;
 }
 
-
 .skill {
   position: relative;
-  margin-top: 15px;
-  margin-left: 15px;
-  width: 350px;
+  margin-top: 145px;
+  margin-left: 10px;
+  width: 270px;
   height: 300px;
 }
-
 
 .skill::after {
   content: "";
   display: inline-block;
   position: absolute;
-  width:270px;
-  height: 1px;
-  border: 1px solid blueviolet;
-  left: 0;
-  top: -10px;
+  width: 270px;
+  height: 50px;
+  top: -50px;
+  background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
 }
 
-.skill li {
-  margin-bottom: 10px;
+.skill>li::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 45px;
+  height: 20px;
+  width: 230px;
+  background: rgba(172,215,236,0.27);
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.skill>li {
+  position: relative;
+  margin-left: -5px;
+  width: 230px;
+  height: 35px;
+}
+.skill>li > span {
+  position: relative;
+  float: left;
+  margin-top: 10px;
+  margin-left: 45px;
+  height: 18px;
+  line-height: 35px;
+  text-align: right;
+  border: 1px solid;
+  border-color: #bfbfbf #b3b3b3 #9e9e9e;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #f0f0f0 0%, #dbdbdb 70%, #cccccc 100%);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+/*.skill>li > span > span {
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #404040;
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);
+}*/
+.skill>li > span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 18px;
+  background: url("../../assets/images/progress.png") 0 0 repeat-x;
+  border-radius: 10px;
+}
+
+
+.skill>li .green {
+  border-color: #78b337 #6ba031 #568128;
+  background-image: linear-gradient(to bottom, #b7dc8e 0%, #99ce5f 70%, #85c440 100%);
+}
+.skill>li .red {
+  border-color: #c73321 #b12d1e #8e2418;
+  background-image: linear-gradient(to bottom, #ea8a7e 0%, #e15a4a 70%, #db3a27 100%);
+}
+.skill>li .orange {
+  border-color: #f0ad24 #eba310 #c5880d;
+  background-image: linear-gradient(to bottom, #f8da9c 0%, #f5c462 70%, #f2b63c 100%);
+}
+
+.skill>li .blue {
+  border-color: #459fd6 #3094d2 #277db2;
+  background-image: linear-gradient(to bottom, #aed5ed 0%, #7bbbe2 70%, #5aaadb 100%);
 }
 
 
@@ -228,74 +318,139 @@
   content: "实践经验";
   display: inline-block;
   position: absolute;
-  top: -25px;
-  left: 207px;
+  top: -30px;
+  font-size: 1.3rem;
 }
 
 .detail {
   position: absolute;
-  width: 480px;
-  height: 800px;
+  width: 470px;
+  height: 400px;
   right: 5px;
-  top: 240px;
+  top: 250px;
 }
 
+.detail::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 470px;
+  height: 50px;
+  top: -45px;
+  background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
+}
+
+.horn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 475px;
+  height: 400px;
+  background: url("../../assets/images/svg/horn.svg") no-repeat;
+  background-size: 100% 100%;
+}
+
+/*
 .timeLine::before {
   content: "";
   display: inline-block;
   position: absolute;
-  height: 150px;
+  height: 100px;
   width: 1px;
   left: 0;
-  top: -160px;
-  background: black;
+  top: -120px;
+  background: #888888;
 }
+*/
 
-.timeLine {
+/*.timeLine {
   position: absolute;
-  height: 150px;
+  height: 100px;
   width: 1px;
-  left: 240px;
-  top: 160px;
-  background: black;
-}
-
+  left: 170px;
+  top: 120px;
+  background: #888888;
+}*/
+/*
 .timeLine::after {
   content: "";
   display: inline-block;
   position: absolute;
-  height: 150px;
+  height: 100px;
   width: 1px;
   left: 0;
-  top: 160px;
-  background: black;
-}
+  top: 120px;
+  background: #888888;
+}*/
 
+/*.firstTime::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  border: 1px solid red;
+  position: absolute;
+  left: 205px;
+  top: 5px;
+}*/
+
+/*
 .firstTime{
   position: absolute;
   width: 200px;
-  top: 145px;
-  right: 5px;
+  top: 100px;
+  left: -40px;
+  text-align: center;
 }
+*/
 
+/*
 
 .secondTime{
   position: absolute;
   width: 200px;
-  top: 300px;
-  left: 5px;
+  top: 220px;
+  left: -40px;
+  text-align: center;
 }
+*/
+
+/*.secondTime::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  border: 1px solid red;
+  position: absolute;
+  left: 205px;
+  top: 5px;
+}*/
+
 
 .viewCube {
-  perspective: 500px;
+  perspective: 800px;
   perspective-origin: 250px 100px;
-  width: 200px;
-  height: 200px;
   zoom: 0.5;
   position: absolute;
-  top: 130px;
-  left: 150px;
+  top: 410px;
+  left: 95px;
 }
+
+
+.cube::before {
+  content: "源码";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  line-height: 315px;
+  text-align: center;
+}
+
 
 .cube {
   width: 200px;
@@ -315,7 +470,7 @@
 }
 
 
-.cube>div {
+.cube>a {
   width: 200px;
   height:200px;
   border: 1px solid rgba(153, 204, 204, 0.8);
@@ -323,54 +478,112 @@
   text-align: center;
   opacity: 0.7;
   position:absolute;
-  cursor: pointer;
 }
 
-.cube>div:nth-child(1) {
+.cube>a:nth-child(1) {
   z-index: 4;
   transform-origin: top;
   transform: rotateX(90deg);
 }
 
-.cube>div:nth-child(2) {
+.cube>a:nth-child(2) {
   z-index: 5;
   transform-origin: right;
   transform: rotateY(90deg);
 }
 
-.cube>div:nth-child(3) {
+.cube>a:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/skill-icon/react.svg") no-repeat 50px 40px;
+  background-size: 50% 50%;
+}
+.cube>a:nth-child(3) {
   z-index: 3;
   transform-origin: bottom;
   transform: rotateX(-90deg);
 }
 
-.cube>div:nth-child(4) {
+.cube>a:nth-child(4) {
   z-index: 6;
   transform-origin: left;
   transform: rotateY(-90deg);
 }
 
-.cube>div:nth-child(5) {
+.cube>a:nth-child(4)::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/skill-icon/vue.svg") no-repeat 50px 40px;
+  background-size: 50% 50%;
+}
+
+.cube>a:nth-child(5) {
   z-index: 2;
   transform-origin: center;
   transform: translateZ(200PX);
 }
 
-.cube>div:nth-child(6) {
+.cube>a:nth-child(5)::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/skill-icon/angular.svg") no-repeat 50px 40px;
+  background-size: 50% 50%;
+}
+
+.cube>a:nth-child(6) {
   z-index: 1;
   transform-origin: center;
   transform: rotateY(180deg);
 }
 
+.cube>a:nth-child(6)::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/skill-icon/java.svg") no-repeat 50px 40px;
+  background-size: 50% 50%;
+}
 
 .viewTetra {
   perspective: 500px;
   perspective-origin: 250px 100px;
   zoom: 0.9;
   position: absolute;
-  top: 225px;
-  left: 315px;
+  top: -15px;
+  left: 300px;
 }
+
+.tetra::before {
+  content: "实战";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  line-height: 165px;
+  text-align: center;
+}
+
 
 .tetra {
   width: 200px;
@@ -397,80 +610,135 @@
   position:absolute;
   transform-origin: center bottom;
   border: 1px solid rgba(153, 204, 204, 0.8);
-/*  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  background-color: rgba(153, 204, 204, 0.8);*/
 }
 
 
 .tetra>a:nth-child(1) {
-  background: url("../../assets/images/skill-icon/angular.svg") no-repeat 50px 85px;
-  background-size: 50% 50%;
   transform: rotateY(120deg) translateZ(57px) rotateX(19.2deg);
 }
 
-.tetra>a:nth-child(2) {
-  background: url("../../assets/images/skill-icon/react.svg") no-repeat 50px 85px;
+.tetra>a:nth-child(1)::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/skill-icon/angular.svg") no-repeat 50px 85px;
   background-size: 50% 50%;
+}
+
+
+.tetra>a:nth-child(2) {
   transform: rotateY(240deg) translateZ(57px) rotateX(19.2deg);
 }
 
+.tetra>a:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/skill-icon/react.svg") no-repeat 50px 85px;
+  background-size: 50% 50%;
+}
+
+
 .tetra>a:nth-child(3) {
+  transform: rotateY(0deg) translateZ(57px) rotateX(19.2deg);
+}
+
+.tetra>a:nth-child(3)::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background: url("../../assets/images/skill-icon/vue.svg") no-repeat 50px 85px;
   background-size: 50% 50%;
-  transform: rotateY(0deg) translateZ(57px) rotateX(19.2deg);
 }
 
 .tetra>a:nth-child(4) {
   transform: rotateY(0deg) translateZ(57px) rotateX(90deg);
 }
 
-.slideView {
-  perspective: 800px;
+.firm::before {
+  content: "工作经验";
+  display: inline-block;
   position: absolute;
-  top: 600px;
-  left: 170px;
-  height: 200px;
+  width: 100px;
+  height: 35px;
+  top: -30px;
+  font-size: 1.3rem;
 }
-.slide {
-  width: 150px;
+
+.firm {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 445px;
+}
+
+.firm::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 470px;
+  height: 50px;
+  top: -45px;
+  background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
+}
+
+.firstFirm::before {
+  content: "cloud soft";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -20px;
+}
+
+.firstFirm {
+  position: relative;
+  width: 400px;
   height: 100px;
-  transform-style: preserve-3d;
-  animation: scrollTriangular 30s linear infinite;
-}
-
-.slide:hover {
-  animation-play-state:paused;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 
-.slide>div {
-  width: 150px;
+.secondFirm::before {
+  content: "ep soft";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -20px;
+}
+
+.secondFirm {
+  position: relative;
+  width: 400px;
   height: 100px;
-  text-align: center;
-  position:absolute;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  background-color: rgba(153, 204, 204, 0.8);
-  cursor: pointer;
+  margin-bottom: 30px;
 }
 
-.slide>div:nth-child(1) {
-  transform: rotateY(0deg) translateZ(150px) rotateX(0deg);
+
+
+.thirdFirm::before {
+  content: "kuyun soft";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -20px;
 }
 
-.slide>div:nth-child(2) {
-  transform: rotateY(60deg) translateZ(150px) rotateX(0deg);
-}
-
-.slide>div:nth-child(3) {
-  transform: rotateY(120deg) translateZ(150px) rotateX(0deg);
-}
-
-.slide>div:nth-child(4) {
-  transform: rotateY(180deg) translateZ(150px) rotateX(0deg);
-}
-.slide>div:nth-child(5) {
-  transform: rotateY(240deg) translateZ(150px) rotateX(0deg);
-}
-.slide>div:nth-child(6) {
-  transform: rotateY(300deg) translateZ(150px) rotateX(0deg);
+.thirdFirm {
+  position: relative;
+  width: 400px;
+  height: 100px;
+  margin-bottom: 30px;
 }

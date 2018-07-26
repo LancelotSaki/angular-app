@@ -1,63 +1,68 @@
 <div class="angularTitle">{{angularVersion}}</div>
 <div class="page">
   <div class="head">
+    <a class="fork" rel="nofollow noopener noreferrer"
+       href="https://github.com/LancelotSaki/angular-app"
+       target="_blank"></a>
     <div class="leftLayout">{{title}}</div>
     <div class="headPhoto"></div>
   </div>
-<ul class="info">
-  <li *ngFor="let i of info">
-    {{i.value}}
-  </li>
-</ul>
-
- <ul class="skill">
-   <li *ngFor="let skill of skills">
-     {{skill.name}}
-   </li>
- </ul>
+  <ul class="info">
+    <li *ngFor="let i of info">
+      {{i.value}}
+    </li>
+  </ul>
+  <ul class="skill">
+    <ng-container *ngFor="let skill of skills">
+      <li class="progress" [style.background]="'url('+skill.image+')'"
+          [style.background-repeat]="'no-repeat'"
+          [style.background-size]="'35px 35px'" title="{{skill.name}}!!!">
+      <span [class]="skill.value >= 82 ? 'green' :
+      skill.value <= 60 ? 'red' :
+      skill.value < 82 &&
+      skill.value > 76 ? 'orange' :
+      skill.value <=76 &&
+      skill.value > 68 ? 'blue' : 'red' "
+            [style.width]="skill.value+'%'"></span>
+      </li>
+    </ng-container>
+  </ul>
   <div class="detail">
+    <div class="horn"></div>
     <div class="viewCube">
       <div class="cube">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.baidu.com"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/react-app"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.baidu.com"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/vue"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/angular-app"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="https://gitee.com/LancelotSaki/ganhx"></a>
       </div>
     </div>
-    <div class="timeLine"></div>
-    <div class="firstTime">2017.01.01-2018.01.01</div>
-    <div class="secondTime">2018.01.01-2018.12.31</div>
     <div class="viewTetra">
       <div class="tetra">
-        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/angular-app"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/react-app"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/vue"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.baidu.com"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="https://angular.ganhx.cn"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="https://react.ganhx.cn"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="https://vue.ganhx.cn"></a>
+        <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.ganhx.cn"></a>
       </div>
     </div>
-    <div class="slideView">
-      <div class="slide">
-        <div>
-          <p>7月1日 天气晴</p>
-        </div>
-        <div>
-          <p>7月2日 天气阴天</p>
-        </div>
-        <div>
-          <p>7月3日 天气有雨</p>
-        </div>
-        <div>
-          <p>7月4日 天气暴雨</p>
-        </div>
-        <div>
-          <p>7月5日 天气晴</p>
-        </div>
-        <div>
-          <p>7月6日 天气晴</p>
-        </div>
-      </div>
+    <div class="firm">
+      <ul class="firstFirm">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      <ul class="secondFirm">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+      <ul class="thirdFirm">
+        <li>1</li>
+        <li>2</li>
+      </ul>
     </div>
   </div>
   <app-footer></app-footer>
