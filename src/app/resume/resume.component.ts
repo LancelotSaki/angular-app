@@ -13,10 +13,13 @@ export class ResumeComponent implements OnInit {
   // 2.先定义再使用(定义用冒号)
   angularVersion: string;
   // 3.外部引入再赋值
+  dialog = '';
+  dialogState = false;
   profile: Profile = {
     id: 1,
     name: 'carney'
   };
+  currentStyle = 'head';
   info = [
     new Info('1', 'carney'),
     new Info('2', '180000000'),
@@ -35,18 +38,47 @@ export class ResumeComponent implements OnInit {
     {id: '8', name: 'Mysql', value: 70, image: '../../assets/images/skill-icon/mysql.svg'},
     {id: '9', name: 'Linux', value: 82, image: '../../assets/images/skill-icon/linux.svg'}];
   constructor() {
-    this.angularVersion = `Angular v6.0.8`;
+    this.angularVersion = `Angular v6.0.9`;
+    const d = new Date();
+    if (d.getHours() <= 10) {
+      this.currentStyle = 'morningHead';
+    } else if (d.getHours() >= 18) {
+      this.currentStyle = 'nightHead';
+    }
   }
 
   ngOnInit() {
-    new Promise((res) => {
-      res(`执行成功`);
-    }).then((res) => {
-      console.log(res);
-    });
+    const words = '感谢你查看我的简历!';
+    // 3s后执行
+    window.setTimeout(() => {
+      this.exeDialog(words);
+    }, 3000);
+    this.dialogState = true;
+    console.log(`开始执行`);
   }
 
-  willClick() {
-    console.log(`点击一下`);
+  /*同步执行*/
+  async exeDialog(words) {
+    console.log(`开始内部同步执行`);
+    const result = await this.returnSay(words);
+    console.log(result);
+    console.log(`同步执行结束`);
+    window.setTimeout( () => {
+      this.dialogState = false;
+    }, 3000);
+  }
+
+  returnSay(words) {
+    let x = 0;
+    return new Promise((res) => {
+      const ti = setInterval(() => {
+        const say = words.substring(0, x++);
+        this.dialog = say;
+        if (words.length - x < 0) {
+          clearInterval(ti);
+          res(`ok`);
+        }
+      }, 120 );
+    });
   }
 }

@@ -35,28 +35,40 @@
   height: 150px;
 }
 
+.morningHead {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: calc(100% - 10px - 310px);
+  height: 200px;
+  background: lightpink;
+  border-radius: 5px;
+}
 
 .head {
-  position: relative;
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  width: calc(100% - 10px);
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: calc(100% - 10px - 310px);
   height: 200px;
   background: blanchedalmond;
   border-radius: 5px;
 }
 
-.leftLayout {
-  margin: 5px;
-  width: 150px;
-  height: 40px;
-  font-size: 2rem;
+.nightHead {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: calc(100% - 10px - 310px);
+  height: 200px;
+  background: black;
+  border-radius: 5px;
 }
 
 .headPhoto {
   position: absolute;
-  right: 80px;
+  top: 40px;
+  right: 120px;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -64,6 +76,170 @@
   background-size: 107% 145%;
 }
 
+.dialogHide {
+  position: absolute;
+  right: 220px;
+  top: 0;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 27px;
+  opacity: 0;
+  background: url("../../assets/images/dialog.png") no-repeat;
+  background-size: 100% 100%;
+  animation: fromOneToZero 2s linear forwards;
+}
+@keyframes fromOneToZero {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.dialogShow {
+  position: absolute;
+  right: 220px;
+  top: 0;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 27px;
+  opacity: 1;
+  background: url("../../assets/images/dialog.png") no-repeat;
+  background-size: 100% 100%;
+  animation: fromZeroToOne 3s linear forwards;
+}
+
+@keyframes fromZeroToOne{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.jobIntention {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 10px;
+  width: 300px;
+  height: 250px;
+}
+
+.jobIntention::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 285px;
+  height: 50px;
+  top: -45px;
+  background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
+}
+
+
+.jobIntention::before {
+  content: "求职意向";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -30px;
+  width: 100px;
+  height: 30px;
+  margin-right: 15px;
+  font-size: 1.3rem;
+}
+.jobIntention>li {
+  line-height: 45px;
+  padding-left: 45px;
+  height: 45px;
+}
+
+.jobIntention>li:first-child {
+  background: url("../../assets/images/svg/job.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
+}
+
+
+.jobIntention>li:first-child::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 285px;
+  height: 1px;
+  border: 1px solid #888888;
+  left: 0;
+  top: 40px;
+}
+
+
+.jobIntention>li:nth-child(2) {
+  background: url("../../assets/images/svg/all.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
+}
+
+
+.jobIntention>li:nth-child(2)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 285px;
+  height: 1px;
+  border: 1px solid #888888;
+  left: 0;
+  top: 85px;
+}
+
+
+.jobIntention>li:nth-child(3) {
+  background: url("../../assets/images/svg/time.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
+}
+
+.jobIntention>li:nth-child(3)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 285px;
+  height: 1px;
+  border: 1px solid #888888;
+  left: 0;
+  top: 130px;
+}
+
+.jobIntention>li:nth-child(4) {
+  background: url("../../assets/images/svg/time.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
+}
+
+.jobIntention>li:nth-child(4)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 285px;
+  height: 1px;
+  border: 1px solid #888888;
+  left: 0;
+  top: 175px;
+}
+
+.jobIntention>li:nth-child(5) {
+  background: url("../../assets/images/svg/salary.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
+}
+
+.jobIntention>li:nth-child(5)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 285px;
+  height: 1px;
+  border: 1px solid #888888;
+  left: 0;
+  top: 220px;
+}
 
 .info::before {
   content: "个人信息";
@@ -79,9 +255,9 @@
 
 .info {
   position: relative;
-  margin-top: 45px;
+  margin-top: 60px;
   margin-left: 10px;
-  width: 350px;
+  width: 300px;
   height: 300px;
 }
 
@@ -90,118 +266,115 @@
   content: "";
   display: inline-block;
   position: absolute;
-  width: 270px;
+  width: 285px;
   height: 50px;
   top: -45px;
   background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
 }
 
-.info li {
-  padding-top: 15px;
+.info>li {
+  padding-left: 45px;
+  height: 45px;
+  line-height: 45px;
 }
 
-.info li:first-child::before {
-  content: "姓名";
-  display: inline-block;
-  width: 45px;
-  height: 30px;
+.info>li:first-child {
+  background: url("../../assets/images/svg/person/name.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
 }
 
-.info li:first-child::after {
+
+.info>li:first-child::after {
   content: "";
   display: inline-block;
   position: absolute;
-  width:270px;
+  width: 285px;
   height: 1px;
   border: 1px solid #888888;
   left: 0;
   top: 40px;
 }
 
-.info li:nth-child(2)::before {
-  content: "邮箱";
-  display: inline-block;
-  width: 45px;
-  height: 30px;
+
+.info>li:nth-child(2) {
+  background: url("../../assets/images/svg/person/phone.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
 }
 
-.info li:nth-child(2)::after {
+
+.info>li:nth-child(2)::after {
   content: "";
   display: inline-block;
   position: absolute;
-  width:270px;
+  width: 285px;
   height: 1px;
   border: 1px solid #888888;
   left: 0;
   top: 85px;
 }
 
-.info li:nth-child(3)::before {
-  content: "手机";
-  display: inline-block;
-  width: 45px;
-  height: 30px;
+.info>li:nth-child(3) {
+  background: url("../../assets/images/svg/person/email.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
 }
 
-.info li:nth-child(3)::after {
+
+.info>li:nth-child(3)::after {
   content: "";
   display: inline-block;
   position: absolute;
-  width:270px;
+  width: 285px;
   height: 1px;
   border: 1px solid #888888;
   left: 0;
   top: 130px;
 }
 
-.info li:nth-child(4)::before {
-  content: "文凭";
-  display: inline-block;
-  width: 45px;
-  height: 30px;
+.info>li:nth-child(4) {
+  background: url("../../assets/images/svg/person/profession.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
 }
 
-.info li:nth-child(4)::after {
+
+.info>li:nth-child(4)::after {
   content: "";
   display: inline-block;
   position: absolute;
-  width:270px;
+  width: 285px;
   height: 1px;
   border: 1px solid #888888;
   left: 0;
   top: 175px;
 }
 
-.info li:nth-child(5)::before {
-  content: "学校";
-  display: inline-block;
-  width: 45px;
-  height: 30px;
+.info>li:nth-child(5) {
+  background: url("../../assets/images/svg/person/school.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
 }
 
-.info li:nth-child(5)::after {
+
+.info>li:nth-child(5)::after {
   content: "";
   display: inline-block;
   position: absolute;
-  width:270px;
+  width: 285px;
   height: 1px;
   border: 1px solid #888888;
   left: 0;
   top: 220px;
 }
 
-.info li:nth-child(6)::before {
-  content: "地址";
-  display: inline-block;
-  width: 45px;
-  height: 30px;
+.info>li:nth-child(6) {
+  background: url("../../assets/images/svg/person/address.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
 }
 
-.info li:nth-child(6)::after {
+
+.info>li:nth-child(6)::after {
   content: "";
   display: inline-block;
   position: absolute;
-  width:270px;
+  width: 285px;
   height: 1px;
   border: 1px solid #888888;
   left: 0;
@@ -222,9 +395,9 @@
 
 .skill {
   position: relative;
-  margin-top: 145px;
+  margin-top: 60px;
   margin-left: 10px;
-  width: 270px;
+  width: 300px;
   height: 300px;
 }
 
@@ -232,7 +405,7 @@
   content: "";
   display: inline-block;
   position: absolute;
-  width: 270px;
+  width: 285px;
   height: 50px;
   top: -50px;
   background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
@@ -245,7 +418,7 @@
   margin-top: 10px;
   margin-left: 45px;
   height: 20px;
-  width: 230px;
+  width: 245px;
   background: rgba(172,215,236,0.27);
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
@@ -256,7 +429,7 @@
 .skill>li {
   position: relative;
   margin-left: -5px;
-  width: 230px;
+  width: 245px;
   height: 35px;
 }
 .skill>li > span {
@@ -350,92 +523,14 @@
   background-size: 100% 100%;
 }
 
-/*
-.timeLine::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  height: 100px;
-  width: 1px;
-  left: 0;
-  top: -120px;
-  background: #888888;
-}
-*/
-
-/*.timeLine {
-  position: absolute;
-  height: 100px;
-  width: 1px;
-  left: 170px;
-  top: 120px;
-  background: #888888;
-}*/
-/*
-.timeLine::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  height: 100px;
-  width: 1px;
-  left: 0;
-  top: 120px;
-  background: #888888;
-}*/
-
-/*.firstTime::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50px;
-  border: 1px solid red;
-  position: absolute;
-  left: 205px;
-  top: 5px;
-}*/
-
-/*
-.firstTime{
-  position: absolute;
-  width: 200px;
-  top: 100px;
-  left: -40px;
-  text-align: center;
-}
-*/
-
-/*
-
-.secondTime{
-  position: absolute;
-  width: 200px;
-  top: 220px;
-  left: -40px;
-  text-align: center;
-}
-*/
-
-/*.secondTime::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50px;
-  border: 1px solid red;
-  position: absolute;
-  left: 205px;
-  top: 5px;
-}*/
-
 
 .viewCube {
   perspective: 800px;
   perspective-origin: 250px 100px;
   zoom: 0.5;
   position: absolute;
-  top: 410px;
-  left: 95px;
+  top: 320px;
+  left: 140px;
 }
 
 
@@ -449,6 +544,7 @@
   height: 200px;
   line-height: 315px;
   text-align: center;
+  transform: rotateY(90deg) translateX(-90px);
 }
 
 
@@ -562,6 +658,7 @@
   background: url("../../assets/images/skill-icon/java.svg") no-repeat 50px 40px;
   background-size: 50% 50%;
 }
+
 
 .viewTetra {
   perspective: 500px;
