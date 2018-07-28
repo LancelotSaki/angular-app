@@ -1,18 +1,22 @@
 <div class="angularTitle">{{angularVersion}}</div>
+<div class="otherPage" *ngIf="false">
+  <a rel="nofollow noopener noreferrer" target="_blank" href="https://vue.ganhx.cn"></a>
+  <a rel="nofollow noopener noreferrer" target="_blank" href="https://react.ganhx.cn"></a>
+</div>
 <div class="page">
   <ul class="jobIntention">
-    <li>前端/后台</li>
-    <li>全职</li>
-    <li>南宁</li>
-    <li>随时上岗</li>
-    <li>面议</li>
+    <li title="应聘职位">前端/后台/数据库</li>
+    <li title="工作性质">全职</li>
+    <li title="工作地点">南宁</li>
+    <li title="目前状况">随时上岗</li>
+    <li title="薪资">面议</li>
   </ul>
-  <div class="{{currentStyle}}">
+  <div class="head">
     <a class="fork" rel="nofollow noopener noreferrer"
        href="https://github.com/LancelotSaki/angular-app"
        target="_blank"></a>
     <div class="headPhoto"></div>
-    <div [class]="dialogState?'dialogShow':'dialogHide'">{{dialog}}</div>
+    <div [class]="dialogState">{{dialog}}</div>
   </div>
   <ul class="info">
     <li *ngFor="let i of info">

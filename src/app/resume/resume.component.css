@@ -5,6 +5,31 @@
   width: 200px;
   height: 30px;
 }
+
+.otherPage{
+  position: absolute;
+  width: 890px;
+  left: calc(50% - 397px - 50px);
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.otherPage>a:first-child {
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/images/svg/last-page.svg") no-repeat;
+  background-size: 30px 30px;
+}
+
+.otherPage>a:nth-child(2) {
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/images/svg/next-page.svg") no-repeat;
+  background-size: 30px 30px;
+}
+
+
 .page {
   position: relative;
   width: 794px;
@@ -35,35 +60,15 @@
   height: 150px;
 }
 
-.morningHead {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  width: calc(100% - 10px - 310px);
-  height: 200px;
-  background: lightpink;
-  border-radius: 5px;
-}
-
 .head {
   position: absolute;
   right: 5px;
   top: 5px;
   width: calc(100% - 10px - 310px);
   height: 200px;
-  background: blanchedalmond;
   border-radius: 5px;
 }
 
-.nightHead {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  width: calc(100% - 10px - 310px);
-  height: 200px;
-  background: black;
-  border-radius: 5px;
-}
 
 .headPhoto {
   position: absolute;
@@ -74,6 +79,17 @@
   height: 100px;
   background: url("../../assets/images/cat.png") no-repeat;
   background-size: 107% 145%;
+}
+
+.dialogInit {
+  position: absolute;
+  right: 220px;
+  top: 0;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 27px;
+  opacity: 0;
 }
 
 .dialogHide {
@@ -87,7 +103,7 @@
   opacity: 0;
   background: url("../../assets/images/dialog.png") no-repeat;
   background-size: 100% 100%;
-  animation: fromOneToZero 2s linear forwards;
+  animation: fromOneToZero 1s linear forwards;
 }
 @keyframes fromOneToZero {
   0% {
@@ -108,7 +124,7 @@
   opacity: 1;
   background: url("../../assets/images/dialog.png") no-repeat;
   background-size: 100% 100%;
-  animation: fromZeroToOne 3s linear forwards;
+  animation: fromZeroToOne 1s linear forwards;
 }
 
 @keyframes fromZeroToOne{
@@ -500,7 +516,7 @@
   width: 470px;
   height: 400px;
   right: 5px;
-  top: 250px;
+  top: 340px;
 }
 
 .detail::after {
@@ -778,7 +794,7 @@
   position: absolute;
   width: 400px;
   height: 500px;
-  top: 445px;
+  top: 350px;
 }
 
 .firm::after {
