@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { PersonQueryComponent } from './person-query/person-query.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './common/footer/footer.component';
     ProfileComponent,
     HomeComponent,
     NotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    PersonQueryComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './home/home.component';
 import {ProfileComponent} from './profile/profile.component';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {PersonQueryComponent} from './person-query/person-query.component';
 
 const routes: Routes = [
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'resume', component: ResumeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'profile', component: ProfileComponent},
+  {path: 'personSearch', component: PersonQueryComponent},
   // 找不到相应的页面后跳转指定页面
   {path: '**', component: NotFoundComponent}
 ];

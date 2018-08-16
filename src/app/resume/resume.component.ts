@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // 外部引入变量或者常量值，类似于java中的实体类
 import { Profile, Info } from './resume';
-import {formatNumber} from '@angular/common';
 
 @Component({
   selector: 'app-resume',
