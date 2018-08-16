@@ -19,12 +19,13 @@ export class ResumeComponent implements OnInit {
     name: 'carney'
   };
   info = [
-    new Info('1', 'carney'),
-    new Info('2', '180000000'),
+    new Info('1', '甘恒旭'),
+    new Info('2', '18868875659'),
     new Info('3', '1103418874@qq.com'),
     new Info('4', '大学本科'),
-    new Info('5', '牛岭大学'),
-    new Info('6', '北京二环')
+    new Info('5', '杭州电子科技大学'),
+    new Info('6', '广西南宁市西乡塘区'),
+    new Info('7', '4年工作经验')
   ];
   skills = [{id: '1', name: 'Java', value: 86, image: '../../assets/images/skill-icon/java.svg'},
     {id: '2', name: 'JavaScript', value: 67, image: '../../assets/images/skill-icon/javascript.svg'},
@@ -34,7 +35,8 @@ export class ResumeComponent implements OnInit {
     {id: '6', name: 'Jquery', value: 74, image: '../../assets/images/skill-icon/jquery.svg'},
     {id: '7', name: 'Oracle', value: 68, image: '../../assets/images/skill-icon/oracle.svg'},
     {id: '8', name: 'Mysql', value: 70, image: '../../assets/images/skill-icon/mysql.svg'},
-    {id: '9', name: 'Linux', value: 82, image: '../../assets/images/skill-icon/linux.svg'}];
+    {id: '9', name: 'Linux', value: 82, image: '../../assets/images/skill-icon/linux.svg'},
+{id: '10', name: '微信', value: 72, image: '../../assets/images/skill-icon/weixin.svg'}];
   constructor() {
     this.angularVersion = `Angular v6.0.9`;
   }

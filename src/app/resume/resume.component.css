@@ -151,7 +151,7 @@
 .jobIntention>li {
   line-height: 45px;
   padding-left: 45px;
-  height: 45px;
+  height: 35px;
 }
 
 .jobIntention>li:first-child {
@@ -168,7 +168,7 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 40px;
+  top: 35px;
 }
 
 
@@ -186,7 +186,7 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 85px;
+  top: 70px;
 }
 
 
@@ -203,7 +203,7 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 130px;
+  top: 105px;
 }
 
 .jobIntention>li:nth-child(4) {
@@ -219,7 +219,7 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 175px;
+  top: 140px;
 }
 
 .jobIntention>li:nth-child(5) {
@@ -235,12 +235,12 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 220px;
+  top: 175px;
 }
 
 .info {
   position: relative;
-  margin-top: 60px;
+  margin-top: 45px;
   margin-left: 10px;
   width: 300px;
   height: 300px;
@@ -248,7 +248,7 @@
 
 .info>li {
   padding-left: 45px;
-  height: 45px;
+  height: 35px;
   line-height: 45px;
 }
 
@@ -266,7 +266,7 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 40px;
+  top: 35px;
 }
 
 
@@ -284,7 +284,7 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 85px;
+  top: 70px;
 }
 
 .info>li:nth-child(3) {
@@ -301,7 +301,7 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 130px;
+  top: 105px;
 }
 
 .info>li:nth-child(4) {
@@ -318,7 +318,7 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 175px;
+  top: 140px;
 }
 
 .info>li:nth-child(5) {
@@ -335,7 +335,7 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 220px;
+  top: 175px;
 }
 
 .info>li:nth-child(6) {
@@ -352,12 +352,30 @@
   height: 1px;
   border: 1px solid #888888;
   left: 0;
-  top: 265px;
+  top: 210px;
 }
+
+.info>li:nth-child(7) {
+  background: url("../../assets/images/svg/person/shalou.svg") no-repeat 5px 10px;;
+  background-size: 22px 22px;
+}
+
+
+.info>li:nth-child(7)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 285px;
+  height: 1px;
+  border: 1px solid #888888;
+  left: 0;
+  top: 245px;
+}
+
 
 .skill {
   position: relative;
-  margin-top: 60px;
+  margin-top: 85px;
   margin-left: 10px;
   width: 300px;
   height: 300px;
@@ -466,17 +484,73 @@
   height: 500px;
 }
 
-
 .firstFirm {
   margin-top: 30px;
+}
+
+.firstFirm>li:nth-child(odd), .secondFirm>li:nth-child(odd), .thirdFirm>li:nth-child(odd) {
+  color: red;
+}
+
+.firstFirm>li:first-child::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/clock.png") no-repeat;
+  background-size: 22px 22px;
+}
+
+.firstFirm>li:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/clock.png") no-repeat;
+  background-size: 22px 22px;
+}
+
+.firstFirm>li:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/clock.png") no-repeat;
+  background-size: 22px 22px;
+}
+
+.secondFirm>li:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/clock.png") no-repeat;
+  background-size: 22px 22px;
+}
+
+.secondFirm>li:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/clock.png") no-repeat;
+  background-size: 22px 22px;
+}
+
+.thirdFirm>li:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/clock.png") no-repeat;
+  background-size: 22px 22px;
 }
 
 .firstFirm, .secondFirm, .thirdFirm {
   position: relative;
   width: 470px;
   height: 135px;
-  margin-bottom: 30px;
-  background: white;
+  margin-bottom: 20px;
 }
 
 .firstFirm::before, .secondFirm::before, .thirdFirm::before {
@@ -487,10 +561,10 @@
   top: -20px;
   width: 470px;
   font-size: 1rem;
-  background: white;
   font-weight: 800;
   font-style: italic;
 }
+
 
 .view3d {
   position: absolute;
