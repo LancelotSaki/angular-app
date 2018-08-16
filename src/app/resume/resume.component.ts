@@ -11,7 +11,7 @@ import {formatNumber} from '@angular/common';
 export class ResumeComponent implements OnInit {
   // 1.直接定义直接赋值(赋值使用要用等于号)
   dialog = '';
-  dialogState = 'dialogInit';
+  dialogState = '';
   // 2.先定义再使用(定义用冒号)
   angularVersion: string;
   // 3.外部引入再赋值

@@ -72,8 +72,8 @@
 
 .headPhoto {
   position: absolute;
-  top: 40px;
-  right: 120px;
+  top: 45px;
+  right: 75px;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -81,30 +81,20 @@
   background-size: 107% 145%;
 }
 
-.dialogInit {
-  position: absolute;
-  right: 220px;
-  top: 0;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  padding-left: 27px;
-  opacity: 0;
-}
-
 .dialogHide {
   position: absolute;
-  right: 220px;
+  right: 165px;
   top: 0;
   width: 200px;
-  height: 50px;
-  line-height: 50px;
+  height: 70px;
+  line-height: 55px;
   padding-left: 27px;
   opacity: 0;
-  background: url("../../assets/images/dialog.png") no-repeat;
+  background: url("../../assets/images/svg/dialog.svg") no-repeat;
   background-size: 100% 100%;
   animation: fromOneToZero 1s linear forwards;
 }
+
 @keyframes fromOneToZero {
   0% {
     opacity: 1;
@@ -115,14 +105,14 @@
 }
 .dialogShow {
   position: absolute;
-  right: 220px;
+  right: 165px;
   top: 0;
   width: 200px;
-  height: 50px;
-  line-height: 50px;
+  height: 70px;
+  line-height: 55px;
   padding-left: 27px;
   opacity: 1;
-  background: url("../../assets/images/dialog.png") no-repeat;
+  background: url("../../assets/images/svg/dialog.svg") no-repeat;
   background-size: 100% 100%;
   animation: fromZeroToOne 1s linear forwards;
 }
@@ -136,6 +126,18 @@
   }
 }
 
+.skill::before,.jobIntention::before,.info::before  {
+  content: attr(data-words);
+  display: inline-block;
+  position: absolute;
+  width: 285px;
+  height: 50px;
+  top: -50px;
+  line-height: 60px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
+}
 
 .jobIntention {
   position: relative;
@@ -145,28 +147,7 @@
   height: 250px;
 }
 
-.jobIntention::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 285px;
-  height: 50px;
-  top: -45px;
-  background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
-}
 
-
-.jobIntention::before {
-  content: "求职意向";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -30px;
-  width: 100px;
-  height: 30px;
-  margin-right: 15px;
-  font-size: 1.3rem;
-}
 .jobIntention>li {
   line-height: 45px;
   padding-left: 45px;
@@ -210,7 +191,7 @@
 
 
 .jobIntention>li:nth-child(3) {
-  background: url("../../assets/images/svg/time.svg") no-repeat 5px 10px;;
+  background: url("../../assets/images/svg/person/address.svg") no-repeat 5px 10px;;
   background-size: 22px 22px;
 }
 
@@ -257,35 +238,12 @@
   top: 220px;
 }
 
-.info::before {
-  content: "个人信息";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -30px;
-  width: 100px;
-  height: 30px;
-  margin-right: 15px;
-  font-size: 1.3rem;
-}
-
 .info {
   position: relative;
   margin-top: 60px;
   margin-left: 10px;
   width: 300px;
   height: 300px;
-}
-
-
-.info::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 285px;
-  height: 50px;
-  top: -45px;
-  background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
 }
 
 .info>li {
@@ -397,34 +355,12 @@
   top: 265px;
 }
 
-.skill::before {
-  content: "个人技能";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -35px;
-  width: 100px;
-  height: 30px;
-  margin-right: 15px;
-  font-size: 1.3rem;
-}
-
 .skill {
   position: relative;
   margin-top: 60px;
   margin-left: 10px;
   width: 300px;
   height: 300px;
-}
-
-.skill::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 285px;
-  height: 50px;
-  top: -50px;
-  background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
 }
 
 .skill>li::before {
@@ -502,31 +438,65 @@
   background-image: linear-gradient(to bottom, #aed5ed 0%, #7bbbe2 70%, #5aaadb 100%);
 }
 
-
-.detail::before {
-  content: "实践经验";
-  display: inline-block;
-  position: absolute;
-  top: -30px;
-  font-size: 1.3rem;
-}
-
 .detail {
   position: absolute;
   width: 470px;
-  height: 400px;
+  height: 900px;
   right: 5px;
-  top: 340px;
+  top: 195px;
 }
 
-.detail::after {
-  content: "";
+.view3d::before,.firm::before {
+  content: attr(data-words);
   display: inline-block;
   position: absolute;
   width: 470px;
   height: 50px;
   top: -45px;
+  line-height: 60px;
+  font-size: 1.3rem;
+  font-weight: 900;
   background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
+}
+
+
+.firm {
+  position: absolute;
+  width: 470px;
+  height: 500px;
+}
+
+
+.firstFirm {
+  margin-top: 30px;
+}
+
+.firstFirm, .secondFirm, .thirdFirm {
+  position: relative;
+  width: 470px;
+  height: 135px;
+  margin-bottom: 30px;
+  background: white;
+}
+
+.firstFirm::before, .secondFirm::before, .thirdFirm::before {
+  content: attr(data-words);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -20px;
+  width: 470px;
+  font-size: 1rem;
+  background: white;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.view3d {
+  position: absolute;
+  width: 470px;
+  height: 300px;
+  top: 590px;
 }
 
 .horn {
@@ -545,7 +515,7 @@
   perspective-origin: 250px 100px;
   zoom: 0.5;
   position: absolute;
-  top: 320px;
+  top: 230px;
   left: 140px;
 }
 
@@ -568,7 +538,7 @@
   width: 200px;
   height: 200px;
   transform-style: preserve-3d;
-   animation: scroll 15s linear infinite;
+  animation: scroll 15s linear infinite;
 }
 
 .cube:hover {
@@ -681,7 +651,7 @@
   perspective-origin: 250px 100px;
   zoom: 0.9;
   position: absolute;
-  top: -15px;
+  top: -20px;
   left: 300px;
 }
 
@@ -778,80 +748,4 @@
 
 .tetra>a:nth-child(4) {
   transform: rotateY(0deg) translateZ(57px) rotateX(90deg);
-}
-
-.firm::before {
-  content: "工作经验";
-  display: inline-block;
-  position: absolute;
-  width: 100px;
-  height: 35px;
-  top: -30px;
-  font-size: 1.3rem;
-}
-
-.firm {
-  position: absolute;
-  width: 400px;
-  height: 500px;
-  top: 350px;
-}
-
-.firm::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 470px;
-  height: 50px;
-  top: -45px;
-  background: url("../../assets/images/svg/brokenLine.svg") no-repeat;
-}
-
-.firstFirm::before {
-  content: "cloud soft";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -20px;
-}
-
-.firstFirm {
-  position: relative;
-  width: 400px;
-  height: 100px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-
-.secondFirm::before {
-  content: "ep soft";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -20px;
-}
-
-.secondFirm {
-  position: relative;
-  width: 400px;
-  height: 100px;
-  margin-bottom: 30px;
-}
-
-
-
-.thirdFirm::before {
-  content: "kuyun soft";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -20px;
-}
-
-.thirdFirm {
-  position: relative;
-  width: 400px;
-  height: 100px;
-  margin-bottom: 30px;
 }

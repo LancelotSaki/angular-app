@@ -4,7 +4,7 @@
   <a rel="nofollow noopener noreferrer" target="_blank" href="https://react.ganhx.cn"></a>
 </div>
 <div class="page">
-  <ul class="jobIntention">
+  <ul class="jobIntention" data-words="求职意向">
     <li title="应聘职位">前端/后台/数据库</li>
     <li title="工作性质">全职</li>
     <li title="工作地点">南宁</li>
@@ -18,12 +18,12 @@
     <div class="headPhoto"></div>
     <div [class]="dialogState">{{dialog}}</div>
   </div>
-  <ul class="info">
+  <ul class="info" data-words="个人信息">
     <li *ngFor="let i of info">
       {{i.value}}
     </li>
   </ul>
-  <ul class="skill">
+  <ul class="skill" data-words="个人技能">
     <ng-container *ngFor="let skill of skills">
       <li class="progress" [style.background]="'url('+skill.image+')'"
           [style.background-repeat]="'no-repeat'"
@@ -39,41 +39,45 @@
     </ng-container>
   </ul>
   <div class="detail">
-    <div class="horn"></div>
-    <div class="viewCube">
-      <div class="cube">
-        <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.baidu.com"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/react-app"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.baidu.com"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/vue"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/angular-app"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="https://gitee.com/LancelotSaki/ganhx"></a>
-      </div>
+    <div class="firm" data-words="工作经验">
+      <ul class="firstFirm" data-words="深圳市云软信息技术有限公司">
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017.10.30 - 2018.05.08<li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在该公司任职期间担任软件开发工程师,主要负责微信公众号的后台接口对接以及前端网页开发！</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2018.05.08 - 2018.08.16<li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人使用angular框架对江苏中烟公众号代码进行重构!</li>
+      </ul>
+      <ul class="secondFirm" data-words="浙江网新恩普软件有限公司">
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.01.04 - 2017.05.16</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成立温州项目组并正式成为全栈开发工程师,主要负责五险人员参保、停保、缴费、险种转入转出的业务！并随后使用vue.js开发小型的网上申报系统！</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015.07.10 - 2015.12.31</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;担任后台开发维护人员,主要负责金华城乡居民养老系统和兰溪医保系统的后期运维!</li>
+      </ul>
+      <ul class="thirdFirm" data-words="浙江酷好软件科技有限公司">
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2014.03.04 - 2015.05.26</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在该公司还未正式成立前以实习生的身份加入该工作室，并在正式注册为公司后，负责慧尚商城人员信息系统的后台开发。</li>
+      </ul>
     </div>
-    <div class="viewTetra">
-      <div class="tetra">
-        <a rel="nofollow noopener noreferrer" target="_blank" href="https://angular.ganhx.cn"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="https://react.ganhx.cn"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="https://vue.ganhx.cn"></a>
-        <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.ganhx.cn"></a>
+
+    <div class="view3d" data-words="实战经验">
+      <div class="horn"></div>
+      <div class="viewCube">
+        <div class="cube">
+          <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.baidu.com"></a>
+          <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/react-app"></a>
+          <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.baidu.com"></a>
+          <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/vue"></a>
+          <a rel="nofollow noopener noreferrer" target="_blank" href="https://github.com/LancelotSaki/angular-app"></a>
+          <a rel="nofollow noopener noreferrer" target="_blank" href="https://gitee.com/LancelotSaki/ganhx"></a>
+        </div>
       </div>
-    </div>
-    <div class="firm">
-      <ul class="firstFirm">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-      <ul class="secondFirm">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-      </ul>
-      <ul class="thirdFirm">
-        <li>1</li>
-        <li>2</li>
-      </ul>
+      <div class="viewTetra">
+        <div class="tetra">
+          <a rel="nofollow noopener noreferrer" target="_blank" href="https://angular.ganhx.cn"></a>
+          <a rel="nofollow noopener noreferrer" target="_blank" href="https://react.ganhx.cn"></a>
+          <a rel="nofollow noopener noreferrer" target="_blank" href="https://vue.ganhx.cn"></a>
+          <a rel="nofollow noopener noreferrer" target="_blank" href="http://www.ganhx.cn"></a>
+        </div>
+      </div>
     </div>
   </div>
   <app-footer></app-footer>
