@@ -1,0 +1,237 @@
+.home {
+  min-width: 600px;
+}
+.home a {
+  text-decoration:none;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: #ebebeb;
+}
+.myHeaderIcon {
+  position: absolute;
+  left: 60px;
+  margin: auto;
+  width: 80px;
+  height: 50px;
+}
+.myHeaderIcon>img {
+  width: 80px;
+  height: 50px;
+}
+.myGrid {
+  float: right;
+  margin-right: 30px;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/images/svg/grid.svg") no-repeat;
+  background-size: 25px 25px;
+}
+
+.myGridPage {
+  position: absolute;
+  width: 150px;
+  height: 120px;
+  top: 50px;
+  right: 175px;
+  background: #aed5ed;
+  z-index: 99;
+  opacity: 0;
+}
+
+.myNotify{
+  float: right;
+  margin-right: 30px;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/images/svg/myNotify.svg") no-repeat;
+  background-size: 25px 25px;
+}
+
+.myNotifyPage {
+  position: absolute;
+  width: 150px;
+  height: 120px;
+  top: 50px;
+  right: 35px;
+  background: #aed5ed;
+  z-index: 99;
+}
+
+.myAccount {
+  float: right;
+  margin-right: 55px;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/images/svg/myAccount.svg") no-repeat;
+  background-size: 30px 30px;
+}
+
+.myAccountPage{
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  top: 50px;
+  right: 15px;
+  background: #aed5ed;
+  z-index: 99;
+  opacity: 0;
+  border-radius: 5px;
+}
+
+.myAccountPage .accountBottom {
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: auto;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.myAccountPage .accountBottom>input[type='button'] {
+  border-radius: 5px;
+  border: 0;
+  background: #f0ad24;
+  color: white;
+}
+
+.myGrid:hover+.myGridPage, .myNotify:hover+.myNotifyPage {
+  animation: fromZeroToOne 1.2s linear forwards;
+}
+
+.show {
+  animation: fromZeroToOne 1.2s linear forwards;
+}
+.hide {
+  animation: fromOneToZero 1.2s linear forwards;
+}
+
+@keyframes fromZeroToOne{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fromOneToZero {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .aside {
+    float: left;
+    position: relative;
+    width: 100px;
+    background: #ebebeb;
+  }
+  .main {
+    position: relative;
+    float: left;
+    width: calc(100% - 100px);
+    height: 1200px;
+    background: #7bbbe2;
+  }
+}
+@media screen and (min-width: 600px){
+  .aside {
+    position: relative;
+    float: left;
+    width: 300px;
+    background: #ebebeb;
+  }
+  .main {
+    position: relative;
+    float: left;
+    width: calc(100% - 300px);
+    height: 1200px;
+    background: #7bbbe2;
+  }
+}
+.leftMenu li {
+  margin-left: -25px;
+}
+.rightTopContext {
+  position: relative;
+  float: left;
+  width: 100%;
+  background: #99ce5f;
+  height: 25px;
+  line-height: 25px;
+}
+.rightBottomContext {
+  position: relative;
+  float: left;
+  width: 100%;
+  background: #8e2418;
+  height: 700px;
+}
+input[id^='subFolder'] ~ [id^='subMenu'] {
+  display:none;
+}
+input[id^='subFolder']:checked ~ [id^='subMenu'] {
+  display: block;
+}
+input[id^='subFolder'] {
+  display: none;
+}
+.footer {
+  position: relative;
+  clear:both;
+  width: calc(100% - 180px);
+  height: 50px;
+  margin-left: 90px;
+  background: #9e9e9e;
+}
+
+.footer> a:nth-child(1) {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  bottom: 0;
+  margin: auto;
+  height: 50px;
+  line-height: 50px;
+}
+
+.footer> a:nth-child(2) {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 160px;
+  bottom: 0;
+  margin: auto;
+  height: 50px;
+  line-height: 50px;
+}
+
+
+.footer> a:nth-child(3) {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 270px;
+  bottom: 0;
+  margin: auto;
+  height: 50px;
+  line-height: 50px;
+}
+
+.autoDiv {
+  position: absolute;
+  opacity: 0;
+}

@@ -1,3 +1,96 @@
-<p>
-  home works!
-</p>
+<app-progress [status]="progressStatus"></app-progress>
+<div class="home">
+  <!--头部-->
+  <div class="header">
+    <a class="myHeaderIcon" href="http://www.baidu.com" target="_blank">
+      <img src="../../assets/images/svg/google.svg"/>
+    </a>
+    <div class="myAccount"></div>
+    <div class="myAccountPage">
+      <div>hello</div>
+      <div class="accountBottom">
+        <input type="button" value="账号管理">
+        <input type="button" value="退出">
+      </div>
+    </div>
+    <div class="myNotify"></div>
+    <div class="myNotifyPage">通知</div>
+    <div class="myGrid" #myGridId></div>
+    <div class="myGridPage">九宫格</div>
+  </div>
+  <!--左边-->
+  <div class="aside">
+    <ol class="leftMenu">
+      <li><input id="subFolder1" type="checkbox" checked><label for="subFolder1">东流小学</label>
+        <ol id="subMenu1">
+          <li>
+            <input type="checkbox" id="subFolder10" checked/><label for="subFolder10">六年级</label>
+            <ol id="subMenu100">
+              <li>
+                <a routerLink="query">6-1班</a>
+              </li>
+              <li>
+                <a routerLink="profile">6-2班</a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <input type="checkbox" id="subFolder11" checked/><label for="subFolder11">五年级</label>
+            <ol id="subMenu101">
+              <li>
+                <a routerLink="query">5-1班</a>
+              </li>
+              <li>
+                <a routerLink="profile">5-2班</a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <input type="checkbox" id="subFolder12" checked/><label for="subFolder12">四年级</label>
+            <ol id="subMenu102">
+              <li>
+                <a routerLink="query">4-1班</a>
+              </li>
+              <li>
+                <a routerLink="profile">4-2班</a>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li><input id="subFolder2" type="checkbox" checked/><label for="subFolder2">南流小学</label>
+        <ol id="subMenu2">
+          <li>
+            <input type="checkbox" id="subFolder20" checked/><label for="subFolder20">六年级</label>
+            <ol id="subMenu200">
+              <li>
+                <a routerLink="query">6-1班</a>
+              </li>
+              <li>
+                <a routerLink="profile">6-2班</a>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+
+  <!--主内容-->
+  <div class="main">
+    <div class="rightTopContext">
+      右边的内容
+    </div>
+    <div class="rightBottomContext">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+   <!--底部-->
+  <div class="footer">
+    <a href="http://www.baidu.com" target="_blank">关于我们</a>
+    <a href="http://www.baidu.com" target="_blank">帮助和反馈</a>
+    <a href="http://www.baidu.com" target="_blank">隐式政策</a>
+  </div>
+  <!--页脚-->
+  <app-footer></app-footer>
+</div>

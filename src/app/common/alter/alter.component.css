@@ -1,0 +1,43 @@
+.myAlert {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: rgba(89,86,80,0.38);
+  z-index: 999;
+}
+.alterContainer {
+  position: fixed;
+  width: 500px;
+  height: 400px;
+  background: thistle;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 5px;
+}
+@keyframes fromZeroToOne{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fromOneToZero {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.show {
+  animation: fromZeroToOne 1.2s linear forwards;
+}
+.hide {
+  animation: fromOneToZero 1.2s linear forwards;
+}

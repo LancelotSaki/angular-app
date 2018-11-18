@@ -1,0 +1,41 @@
+<div class="registerPage">
+  <form class="registerContainer">
+    <ul>
+      <li><input type="text" name="username" placeholder="昵称(用户名)" maxlength="35"></li>
+    </ul>
+    <ul>
+      <li><input type="password" name="password" placeholder="密码" maxlength="35"></li>
+    </ul>
+    <ul>
+      <li><input type="password" name="repeatPassword" placeholder="二次密码" maxlength="35"></li>
+    </ul>
+    <ul>
+      <li><input type="email" name="email" placeholder="邮箱(方便密码找回)" maxlength="35"></li>
+    </ul>
+    <ul>
+      <li><input type="text" name="checkCode" maxlength="6" placeholder="邮箱验证码"></li>
+      <li><input type="button" name="sendEmail" value="发 送"></li>
+    </ul>
+    <ul>
+      <li class="phoneCheck" [attr.data-words]="checkBox.phoneCheck">
+        <input type="text" name="phone" maxlength="11" placeholder="手机号码"
+               [(ngModel)]="formValue.phone"
+               (ngModelChange)="phoneChange($event)"></li>
+    </ul>
+    <ul>
+      <li><input type="text" name="verify" maxlength="6" placeholder="手机校验码"
+                 [(ngModel)]="formValue.verifyCode" (ngModelChange)="verifyChange($event)"></li>
+      <li><input type="button" name="sendVerify" [value]="leftTimeFunction()"
+                 (click)="clickSend()" [disabled]="sendClickDisable"></li>
+    </ul>
+    <div class="readCss">
+      <input type="checkbox" id="agreeId" name="agreeCheckbox" [(ngModel)]="agreementStatus" [value]="agreementStatus">
+      <label for="agreeId">我已同意<a routerLink="/login">《XXX注册协议》</a>和<a routerLink="/login">《XXX上网协议》</a></label>
+    </div>
+    <div class="submitCss">
+      <input type="submit" value="注 册">
+      <input type="button" value="重 置">
+    </div>
+  </form>
+</div>
+<!--<app-alter [status]="alterStatus" (childOuter)="getChildData($event)"></app-alter>-->

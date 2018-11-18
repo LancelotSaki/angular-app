@@ -240,7 +240,7 @@
 
 .info {
   position: relative;
-  margin-top: 45px;
+  margin-top: 35px;
   margin-left: 10px;
   width: 300px;
   height: 300px;
@@ -375,7 +375,7 @@
 
 .skill {
   position: relative;
-  margin-top: 85px;
+  margin-top: 50px;
   margin-left: 10px;
   width: 300px;
   height: 300px;
@@ -461,7 +461,7 @@
   width: 470px;
   height: 900px;
   right: 5px;
-  top: 195px;
+  top: 185px;
 }
 
 .view3d::before,.firm::before {
@@ -481,7 +481,7 @@
 .firm {
   position: absolute;
   width: 470px;
-  height: 500px;
+  height: 540px;
 }
 
 .firstFirm {
@@ -549,7 +549,7 @@
 .firstFirm, .secondFirm, .thirdFirm {
   position: relative;
   width: 470px;
-  height: 135px;
+  height: 200px;
   margin-bottom: 20px;
 }
 
@@ -570,8 +570,19 @@
   position: absolute;
   width: 470px;
   height: 300px;
-  top: 590px;
+  top: 630px;
 }
+
+
+.horn::before {
+  content: attr(data-words);
+  display: inline-block;
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  animation: fromOneToZero 45s linear forwards;
+}
+
 
 .horn {
   position: absolute;

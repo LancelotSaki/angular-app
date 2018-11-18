@@ -1,0 +1,188 @@
+.loginPage {
+  position: relative;
+  background: #aed5ed;
+  width: 100vw;
+  min-height: 400px;
+  overflow-y: auto;
+  height: 100vh;
+}
+.loginMain {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.loginContainer {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+  background: rgba(178,175,168,0.27);
+}
+/*@media screen and (max-width: 800px){
+
+}
+@media screen and (min-width: 800px){
+  .loginContainer {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0;
+    bottom: 0;
+    right: 200px;
+    margin: auto;
+    border-radius: 5px;
+    background: rgba(178,175,168,0.27);
+  }
+}*/
+/*float: left;tab并排必须加*/
+.loginContainer>li {
+  float: left;
+  width: 150px;
+}
+
+.toRegister {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 140px;
+  height: 140px;
+  margin: auto;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%);
+}
+.toRegister img {
+  width: 140px;
+  height: 140px;
+}
+  /*隐藏radio*/
+.loginContainer input[id^='loginTab'] {
+  display: none;
+}
+
+/* 将radio相邻的label标签美化一下，可以在这里设置按钮的背景图标*/
+.loginContainer input[id^='loginTab'] + label {
+  height: 35px;
+  width: 150px;
+  text-align: center;
+  float: right;
+  line-height: 35px;
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+/* 聚焦时将radio相邻的label标签添加鼠标手势*/
+.loginContainer input[id^='loginTab'] + label:hover {
+  cursor: pointer;
+}
+
+/*绝对定位内容显示必须*/
+[id^='loginCon'] {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin-left: 8%;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: none;
+  width: 75%;
+}
+
+input[id^='loginTab']:checked ~ [id^='loginCon'] {
+  display: block;
+}
+[id^='loginCon']>input {
+  margin-bottom: 30px;
+  border: 0;
+  padding-left: 7px;
+}
+[id^='loginCon']>input:first-child, [id^='loginCon']>input:nth-child(2) {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+}
+
+[id^='loginCon']>a {
+  width: 75px;
+  height: 35px;
+  text-align: right;
+  float: right;
+  color: #db3a27;
+}
+
+[id='loginCon2']>input:nth-child(2) {
+  height: 35px;
+  border-radius: 5px;
+  width: 65%;
+}
+
+/*这是一个发送短信按键*/
+[id='loginCon2']>input:nth-child(3) {
+  height: 35px;
+  border-radius: 5px;
+  background: #f0ad24;
+  color: white;
+  width: 30%;
+  margin-left: 5%;
+}
+
+[id='loginCon2']>input:nth-child(3):disabled {
+  background:  #A9A9A9;;
+}
+
+[id='loginCon2']>input:nth-child(3):hover {
+  background: #99ce5f;
+}
+
+[id^='loginCon'] input[type='submit'] {
+  height: 35px;
+  border-radius: 5px;
+  background: #f0ad24;
+  color: white;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+[id^='loginCon'] input[type='submit']:hover {
+  height: 35px;
+  border-radius: 5px;
+  background: #99ce5f;
+  color: white;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.alterTab1::before {
+  content: attr(data-words);
+  display: inline-block;
+  position: absolute;
+  top: -65px;
+  width: 100%;
+  color: #db3a27;
+}
+.alterTab1 {
+  position: absolute;
+  top: 105px;
+  width: 100%;
+  color: #db3a27;
+}
+.alterTab2::before {
+  content: attr(data-words);
+  display: inline-block;
+  position: absolute;
+  top: -65px;
+  width: 100%;
+  color: #db3a27;
+}
+
+.alterTab2 {
+  position: absolute;
+  top: 105px;
+  width: 100%;
+  color: #db3a27;
+}

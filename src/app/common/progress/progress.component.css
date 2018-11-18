@@ -1,0 +1,35 @@
+.progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 2px;
+  background: #ebebeb;
+  z-index: 255;
+  overflow-x: hidden;
+}
+.progress::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -40vw;
+  top: 0;
+  width: 40vw;
+  height: 2px;
+  background: #8e2418;
+  animation: progressAnimate linear 5s infinite;
+}
+@keyframes progressAnimate {
+  0% {
+     left: -40vw;
+  }
+  33% {
+    left: 10vw;
+  }
+  66% {
+    left: 60vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}

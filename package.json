@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "start": "ng serve --host 127.0.0.1 --open",
-    "build": "ng build --prod --aot --build-optimizer --source-map=false --base-href ./",
+    "build": "ng build --prod --aot --build-optimizer --source-map=false --configuration=production --base-href ./",
+    "build test": "ng build --prod --aot --build-optimizer --source-map=false --base-href ./ --configuration=test",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

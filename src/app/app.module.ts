@@ -9,7 +9,11 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { PersonQueryComponent } from './person-query/person-query.component';
-
+import { RegisterComponent } from './register/register.component';
+import { FormsModule} from '@angular/forms';
+import { AlterComponent } from './common/alter/alter.component';
+import { ProgressComponent } from './common/progress/progress.component';
+import {TitleService} from './service/title.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,12 +23,21 @@ import { PersonQueryComponent } from './person-query/person-query.component';
     HomeComponent,
     NotFoundComponent,
     FooterComponent,
-    PersonQueryComponent
+    PersonQueryComponent,
+    RegisterComponent,
+    AlterComponent,
+    ProgressComponent
   ],
+  providers: [ TitleService ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(titleService: TitleService) {
+    titleService.getTitle();
+  }
+}

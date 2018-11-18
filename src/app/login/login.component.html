@@ -1,3 +1,33 @@
-<p>
-  login works!
-</p>
+<div class="loginPage">
+  <div class="loginMain">
+    <ul class="loginContainer">
+      <li>
+        <input type="radio" id="loginTab1" name="tab" checked><label for="loginTab1">密码登录</label>
+        <form id="loginCon1" (ngSubmit)="onSubmit1()">
+          <input type="text" name="username" placeholder="邮箱/手机号码" [(ngModel)]="formValue.username"
+                 (ngModelChange)="usernameChange($event)" maxlength="35">
+          <input type="password" placeholder="密码" name="password" [(ngModel)]="formValue.password"
+                 (ngModelChange)="passwordChange($event)" maxlength="35">
+          <input type="submit" value="登录" [disabled]="beforeSubmit1()">
+          <a href="http://www.baidu.com" target="_blank">忘记密码?</a>
+          <div class="alterTab1" [attr.data-words]="checkBox.usernameCheck">{{checkBox.passwordCheck}}</div>
+        </form>
+      </li>
+      <li>
+        <input type="radio" name="tab" id="loginTab2"><label for="loginTab2">手机登录</label>
+        <form id="loginCon2" (ngSubmit)="onSubmit2()">
+          <input type="text" placeholder="手机号码" maxlength="11" name="phone" [(ngModel)]="formValue.phone"
+                 (ngModelChange)="phoneChange($event)">
+          <input type="text" placeholder="验证码" maxlength="6" name="verify" [(ngModel)]="formValue.verifyCode"
+                 (ngModelChange)="verifyChange($event)">
+          <input type="button" [value]="leftTimeFunction()" (click)="clickSend()" [disabled]="sendClickDisable">
+          <input type="submit" value="登录" [disabled]="beforeSubmit2()">
+          <div class="alterTab2" [attr.data-words]="checkBox.phoneCheck">{{checkBox.verifyCheck}}</div>
+        </form>
+      </li>
+    </ul>
+    <a class="toRegister" routerLink="/register">
+      <img src="../../assets/images/register.png"/>
+    </a>
+  </div>
+</div>

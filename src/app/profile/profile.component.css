@@ -1,1 +1,26 @@
+.profile {
+  width: 100%;
+  height: 600px;
+  background: #ebebeb;
+  /*旋转看看效果*/
+  transform-style: preserve-3d;
+  /*将父元素设置为3d空间*/
+  animation: rotate3D linear 3s forwards;
+}
 
+@keyframes rotate3D {
+  0% {
+    /*修改基本样式*/
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    /*修改基本样式*/
+    transform: rotateY(35deg) rotateX(-55deg);
+  }
+}
+
+.xiaoMing {
+  position: absolute;
+  width: 60px;
+  height: 70px;
+}

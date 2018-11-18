@@ -1,0 +1,142 @@
+.registerPage {
+  position: relative;
+  background: #aed5ed;
+  width: 100vw;
+  min-height: 600px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+@media screen and (max-width: 800px) {
+  .registerContainer {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 5px;
+    background: rgba(178, 175, 168, 0.27);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .registerContainer {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 5px;
+    background: rgba(178, 175, 168, 0.27);
+  }
+}
+
+.registerContainer > ul {
+  position: relative;
+  width: 65%;
+  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.registerContainer input {
+  font-size: 1rem;
+  border: 0;
+  padding-left: 5px;
+}
+
+.registerContainer > ul > li {
+  margin-bottom: 30px;
+}
+
+.registerContainer input[name='username'],
+.registerContainer input[name='password'],
+.registerContainer input[name='repeatPassword'],
+.registerContainer input[name='email'],
+.registerContainer input[name='phone'] {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.registerContainer .phoneCheck::before {
+  content: attr(data-words);
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #ea8a7e;
+  left: 5px;
+  top: 35px;
+}
+
+.registerContainer input[name='checkCode'], .registerContainer input[name='verify'] {
+  width: 65%;
+  height: 35px;
+  border-radius: 5px;
+  float: left;
+}
+
+.registerContainer input[name='sendEmail'], .registerContainer input[name='sendVerify'] {
+  width: 30%;
+  height: 35px;
+  margin-left: 5%;
+  border-radius: 5px;
+  background: #f0ad24;
+  color: white;
+}
+
+.registerContainer input[type='button']:hover {
+  background: #99ce5f;
+}
+
+.readCss {
+  position: relative;
+  width: 65%;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.1rem;
+}
+
+.readCss > input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+}
+
+.readCss a {
+  text-decoration: none;
+}
+
+.submitCss {
+  position: relative;
+  width: 65%;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.submitCss > input {
+  width: 60px;
+  height: 35px;
+  border-radius: 5px;
+  background: #f0ad24;
+  border: 0;
+  color: white;
+  font-size: 1rem;
+}
+
+.submitCss > input:last-child {
+  margin-left: 30px;
+}
+
+.submitCss > input:hover {
+  background: #99ce5f;
+}

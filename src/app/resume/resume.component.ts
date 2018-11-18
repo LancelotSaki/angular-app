@@ -11,6 +11,7 @@ export class ResumeComponent implements OnInit {
   // 1.直接定义直接赋值(赋值使用要用等于号)
   dialog = '';
   dialogState = '';
+  view3dPrint = '';
   // 2.先定义再使用(定义用冒号)
   angularVersion: string;
   // 3.外部引入再赋值
@@ -28,15 +29,16 @@ export class ResumeComponent implements OnInit {
     new Info('7', '4年工作经验')
   ];
   skills = [{id: '1', name: 'Java', value: 86, image: '../../assets/images/skill-icon/java.svg'},
-    {id: '2', name: 'JavaScript', value: 67, image: '../../assets/images/skill-icon/javascript.svg'},
+    {id: '2', name: 'JavaScript', value: 69, image: '../../assets/images/skill-icon/javascript.svg'},
     {id: '3', name: 'Vue', value: 72, image: '../../assets/images/skill-icon/vue.svg'},
-    {id: '4', name: 'React', value: 85, image: '../../assets/images/skill-icon/react.svg'},
+    {id: '4', name: 'React', value: 82, image: '../../assets/images/skill-icon/react.svg'},
     {id: '5', name: 'Angular', value: 77, image: '../../assets/images/skill-icon/angular.svg'},
     {id: '6', name: 'Jquery', value: 74, image: '../../assets/images/skill-icon/jquery.svg'},
-    {id: '7', name: 'Oracle', value: 68, image: '../../assets/images/skill-icon/oracle.svg'},
-    {id: '8', name: 'Mysql', value: 70, image: '../../assets/images/skill-icon/mysql.svg'},
-    {id: '9', name: 'Linux', value: 82, image: '../../assets/images/skill-icon/linux.svg'},
-{id: '10', name: '微信', value: 72, image: '../../assets/images/skill-icon/weixin.svg'}];
+    {id: '7', name: 'Css', value: 71, image: '../../assets/images/skill-icon/css.svg'},
+    {id: '8', name: 'Oracle', value: 68, image: '../../assets/images/skill-icon/oracle.svg'},
+    {id: '9', name: 'Mysql', value: 70, image: '../../assets/images/skill-icon/mysql.svg'},
+    {id: '10', name: 'Linux', value: 78, image: '../../assets/images/skill-icon/linux.svg'},
+{id: '11', name: '微信', value: 72, image: '../../assets/images/skill-icon/weixin.svg'}];
   constructor() {
     this.angularVersion = `Angular v6.0.9`;
   }
@@ -95,6 +97,13 @@ export class ResumeComponent implements OnInit {
         this.waitTimeCloseDialog();
       });
     }, 120000);
+
+    // 这个是执行3d提示
+    const nextF = '这个3d视图可以点击的哦!';
+    // 3s后执行
+    window.setTimeout(() => {
+      this.exePrintTip(nextF);
+    }, 3000);
     console.log(`开始执行`);
   }
 
@@ -107,12 +116,32 @@ export class ResumeComponent implements OnInit {
     console.log(result);
     console.log(`同步执行结束`);
   }
+  /*同步执行2*/
+  async exePrintTip(words) {
+    // await修饰的方法里面返回的必须是promise
+    const result = await this.returnPrint(words);
+    console.log(result);
+    console.log(`同步执行2结束`);
+  }
   returnSay(words) {
     let x = 0;
     return new Promise((res) => {
       const ti = setInterval(() => {
         const say = words.substring(0, x++);
         this.dialog = say;
+        if (words.length - x < 0) {
+          clearInterval(ti);
+          res(`ok`);
+        }
+      }, 120 );
+    });
+  }
+  returnPrint(words) {
+    let x = 0;
+    return new Promise((res) => {
+      const ti = setInterval(() => {
+        const say = words.substring(0, x++);
+        this.view3dPrint = say;
         if (words.length - x < 0) {
           clearInterval(ti);
           res(`ok`);
